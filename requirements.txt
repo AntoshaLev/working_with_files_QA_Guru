@@ -1,0 +1,5 @@
+pytest
+xlrd
+openpyxl
+pypdf
+webdriver-manager
