@@ -25,7 +25,7 @@ def test_txt_in_zip(file_name):
     with ZipFile(os.path.join(TMP_PATH, 'zip_arh_in_tests.zip')) as zf:
         # сравниваем данные файла в архиве с полученными
         assert txt_file_size == zf.getinfo(file_name).file_size
-        assert txt_file_text in zf.read(file_name).decode()
+        assert txt_file_text in zf.read(file_name).decode('utf-8')
 
 
 @pytest.mark.parametrize("file_name", ['file_example_XLS_10.xls'])
